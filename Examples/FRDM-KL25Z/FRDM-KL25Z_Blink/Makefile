@@ -17,7 +17,7 @@
 ##############################################################################################
 # Start of default section
 #
-RM    = del
+RM    = rm -rf 
 RMDIR = rmdir
 TRGT = arm-none-eabi-
 CC   = $(TRGT)gcc
@@ -140,7 +140,7 @@ clean:
 	$(RM) $(FULL_PRJ).bin
 	$(RM) $(subst /,\,$(SRC:.c=.lst))
 	$(RM) $(subst /,\,$(ASRC:.s=.lst))
-	$(RMDIR) .dep /S /Q
+	$(RMDIR) .dep 
 
 # 
 # Include the dependency files, should be the last of the makefile
